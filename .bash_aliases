@@ -20,11 +20,13 @@ alias gcl='git clone'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gd='git diff'
+alias gpull='git pull'
 alias gpush='git push'
 alias gpsuh='git push'
 
 alias get='sudo apt-get install'
 alias restart_apache="sudo /etc/init.d/apache2 restart"
 
+alias v='vim'
 alias vi='vim'
 alias u='cd .. ls'
