@@ -5,5 +5,5 @@ cp ~/.dot_files/.bashrc ~/.bashrc
 cp ~/.dot_files/.gitconfig ~/.gitconfig
 cp ~/.dot_files/.screenrc ~/.screenrc
 cp ~/.dot_files/.bash_aliases ~/.bash_aliases
-cp ~/.dot_files/.bash_history ~/.bash_history
+cp ~/.dot_files/.bash_history_config ~/.bash_history_config
 cp ~/.dot_files/.bash_config ~/.bash_config
