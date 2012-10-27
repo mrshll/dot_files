@@ -1,0 +1,73 @@
+# handle the fact that this file will be used with multiple OSs
+platform=`uname`
+if [[ $platform == 'Linux' ]]; then
+  alias a='ls -lrth --color'
+elif [[ $platform == 'Darwin' ]]; then
+  alias a='ls -lrthG'
+fi
+# aliases
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias t='sh /usr/local/Cellar/todo-txt/2.9/bin/todo.sh -d ~/.todo.cfg'
+
+alias tufts='ssh -t mmoute01@linux.cs.tufts.edu'
+alias me='sh ~/scripts/connectHome.sh'
+alias s='cd ~/Dropbox/School/S06/'
+alias txtb='cd ~/Dropbox/School/textbooks/'
+alias pewpew='ssh mmoutenot@pewpewlasers.com'
+alias proj='cd ~/projects/'
+
+alias ga='git add .'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gcl='git clone'
+alias gcm='git commit -m'
+alias gcam='git commit -am'
+alias gco='git checkout'
+alias gd='git diff'
+alias gpull='git pull'
+alias gpush='git push'
+alias gpsuh='git push'
+
+alias get='sudo apt-get install'
+alias restart_apache="sudo /etc/init.d/apache2 restart"
+
+alias v='/usr/bin/vim'
+alias mvim='open -a MacVim.app'
+alias vi='mvim'
+alias vim='mvim'
+alias c='clear'
+alias u='cd ..'
+alias ls='ls -G'
+
+function cs () {
+    cd "$@" && ls
+}
+
+alias so='source ~/.zshrc'
+
+#osx specific aliases
+alias preview='open -a Preview'
+
+#virtualenv aliases
+alias wub="cd /Users/mmoutenot/projects/wub && source /Users/mmoutenot/projects/wub/wubenv/bin/activate"
+alias concierge="cd /Users/mmoutenot/projects/Concierge/web && source /Users/mmoutenot/projects/Concierge/web/conciergeenv/bin/activate"

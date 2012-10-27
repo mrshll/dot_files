@@ -1,0 +1,8 @@
+# Gimme a huge history
+export HISTSIZE=50000
+
+# Don't store duplicate lines in history
+export HISTCONTROL=ignoreboth
+
+# Unify histories across screen sessions
+PROMPT_COMMAND="$PROMPT_COMMAND;history -a; history -n"
