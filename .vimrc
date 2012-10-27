@@ -23,8 +23,8 @@ Bundle 'gmarik/vundle'
 Bundle 'ervandew/supertab'
 Bundle 'tomtom/tcomment_vim'
 
-" adds cool git stuff from within vim. - I don't use
-" Bundle 'tpope/vim-fugitive'
+" adds cool git stuff from within vim
+Bundle 'tpope/vim-fugitive'
 
 " cs"' changes surrounding " to '
 Bundle 'tpope/vim-surround'
@@ -44,7 +44,7 @@ Bundle 'garbas/vim-snipmate'
 " fantastic file browser, open a directory with vim
 Bundle 'scrooloose/nerdtree'
 
-" allows you to run commands from within vim - don't use
+" allows you to run commands from within vim - I don't use
 " Bundle 'rson/vim-conque'
 
 " Aligns on any character with ':Align ='
@@ -70,7 +70,7 @@ Bundle 'Lokaltog/vim-powerline'
 "{{{Auto Commands
 
 " Automatically cd into the directory that the file is in
-set autochdir
+" set autochdir
 
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
