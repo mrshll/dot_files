@@ -31,7 +31,6 @@ alias t='sh /usr/local/Cellar/todo-txt/2.9/bin/todo.sh -d ~/.todo.cfg'
 
 alias tufts='ssh -t mmoute01@linux.cs.tufts.edu'
 alias me='sh ~/scripts/connectHome.sh'
-alias s='cd ~/Dropbox/School/S06/'
 alias txtb='cd ~/Dropbox/School/textbooks/'
 alias pewpew='ssh mmoutenot@pewpewlasers.com'
 alias proj='cd ~/projects/'
@@ -60,7 +59,7 @@ alias u='cd ..'
 alias ls='ls -G'
 
 function cs () {
-    cd "$@" && ls
+  cd "$@" && ls
 }
 
 alias so='source ~/.zshrc'
@@ -69,5 +68,16 @@ alias so='source ~/.zshrc'
 alias preview='open -a Preview'
 
 #virtualenv aliases
-alias wub="cd /Users/mmoutenot/projects/wub && source /Users/mmoutenot/projects/wub/wubenv/bin/activate"
-alias concierge="cd /Users/mmoutenot/projects/Concierge/web && source /Users/mmoutenot/projects/Concierge/web/conciergeenv/bin/activate"
+source ~/.virtualenv-auto-activate.sh
+
+USER='mmoutenot'
+function git-create () {
+  mkdir ${1}
+  cd ${1}
+  git init
+  touch README.md
+  curl -u "${USER}" https://api.github.com/user/repos -d '{"name":"'${1}'"}' > /dev/null
+  git remote add origin git@github.com:${USER}/${1}.git
+  ga; gcam 'first commit'; gpush origin master
+}
+

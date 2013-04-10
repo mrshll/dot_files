@@ -31,17 +31,20 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
+plugins=(osx vim brew pip screen vi-mode django)
+
+source $ZSH/oh-my-zsh.sh
+
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 if [ -f ~/.zsh_config ]; then
     . ~/.zsh_config
 fi
-if [ -f ~/.zsh_history_config ]; then
-    . ~/.zsh_history_config
-fi
+# if [ -f ~/.zsh_history_config ]; then
+#     . ~/.zsh_history_config
+# fi
 
-plugins=(osx vim brew pip screen vi-mode django)
-
-source $ZSH/oh-my-zsh.sh
-
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export PGHOST=/tmp

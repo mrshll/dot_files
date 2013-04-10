@@ -2,7 +2,11 @@
 # general #
 ###########
 export EDITOR="vim"
-export PATH=$PATH:/usr/local/mysql/bin
+export PATH="$PATH:/usr/local/mysql/bin"
+
+export PATH="$PATH:/usr/local/share/npm/bin"
+export PATH="./node_modules/.bin:$PATH"
+export NODE_PATH="/usr/local/lib/node"
 
 # Set this so screen will show the currently-running program
 PROMPT_COMMAND='echo -ne ""'
@@ -14,7 +18,7 @@ stty stop undef
 #################
 # prompt stuff #
 #################
-PS1='\[\e[0;32m\]\u\[\e[0;37m\]@\[\e[0;35m\]\h:\[\e[0;36m\]\W \[\e[1;31m\]\$ \[\e[0;37m\]'
+# PS1='\[\e[0;32m\]\u\[\e[0;37m\]@\[\e[0;35m\]\h:\[\e[0;36m\]\W \[\e[1;31m\]\$ \[\e[0;37m\]'
 
 
 #####################
@@ -41,3 +45,6 @@ PS1='\[\e[0;32m\]\u\[\e[0;37m\]@\[\e[0;35m\]\h:\[\e[0;36m\]\W \[\e[1;31m\]\$ \[\
 # else
 #     start_agent;
 # fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "$(rbenv init -)"
