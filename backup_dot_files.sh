@@ -7,3 +7,4 @@ cp ~/.zsh_aliases ~/workspace/dot_files/
 cp ~/.zsh_history_config ~/workspace/dot_files/
 cp ~/.gitconfig ~/workspace/dot_files/
 cp ~/.screenrc ~/workspace/dot_files/
+cp ~/.virtualenv-auto-activate.sh ~/workspace/dot_files/
