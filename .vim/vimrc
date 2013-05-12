@@ -44,6 +44,8 @@ Bundle 'garbas/vim-snipmate'
 
 " fantastic file browser, open a directory with vim
 Bundle 'scrooloose/nerdtree'
+set splitright
+set splitbelow
 
 " Aligns on any character with ':Align ='
 Bundle 'vim-scripts/Align'
@@ -69,6 +71,9 @@ Bundle 'Valloric/YouCompleteMe'
 
 " Git gutter shows diffs on the left num bar!
 Bundle 'airblade/vim-gitgutter'
+
+" CoffeeScript support
+Bundle 'kchmck/vim-coffee-script'
 
 
 "{{{Auto Commands
@@ -282,6 +287,9 @@ set undoreload=10000        " number of lines to save for undo
 "{{{ Mappings
 
 let mapleader = ","
+
+" NERDTree
+nnoremap <leader>d :NERDTreeToggle<cr>
 
 " GIT Commands
 noremap <Leader>gac :Gcommit -m -a ""<LEFT>
@@ -517,3 +525,5 @@ noremap <leader>ksh :ConqueTermSplit /bin/ksh<cr>
 " Always show line numbers and current position. ALWAYS!
 set ruler
 set number
+
+let g:NERDTreeWinSize = 20
